@@ -1,0 +1,24 @@
+extends ../layout
+
+block content 
+
+  <button type ="button" class ="btn btn-success float-right"  >create new project</button>
+    table.table 
+        thead 
+            tr 
+                th Name 
+               
+                th Date
+                th Time 
+                th Actions 
+        tbody 
+           each todo in todos 
+                tr 
+                    td=todo.todos 
+                    td=todo.date 
+                    td=todo.time 
+                    td 
+                        //- a(href="/products/delete/"+todo._id , <button class= "btn" >delete</button>)
+                        a(href="/products/delete/"+todo._id , class="fa fa-trash btn-danger")
+                        a(href="/products/edit/"+todo._id , class="fa fa-pencil btn-primary") 
+                        a(href="/products/add", class="fa fa-plus-square btn-info")  

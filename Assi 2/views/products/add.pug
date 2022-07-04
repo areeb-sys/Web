@@ -1,0 +1,15 @@
+extends ../layout
+
+block content 
+    h1 Add new product
+    form(action="/products/add", method="POST")
+        .form-group 
+            label(for="todos") Todos
+            input#name(type="text", class="form-control", name="todos")
+        .form-group 
+            label(for="date") Date
+            input#date(type="date", class="form-control", name="date")
+        .form-group 
+            label(for="time") Time 
+            input#time(type="time", class="form-control", name="time")
+        input(type="submit", class="btn btn-info ")
